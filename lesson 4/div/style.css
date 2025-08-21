@@ -1,0 +1,21 @@
+.box1{
+    width: 64%;
+    height: 300px;
+    display: block;
+    text-align: center;
+    background-color: aliceblue;
+    color: black;
+    border-style: solid;
+}
+
+.center-div{
+    margin: 0 auto;
+}
+
+.box2{
+    width: 50%;
+    height: 60%;
+    background-color: black;
+    color: aliceblue;
+    text-align: center;
+}

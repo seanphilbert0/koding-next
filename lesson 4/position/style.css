@@ -1,0 +1,57 @@
+body{
+    background-color: aquamarine;
+    padding-left: 15px;
+    padding-top: 30px;
+    height: 1500px;
+}
+
+.absolute{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 10%;
+    height: 100%;
+    padding: 5px;
+    border: 5px solid blue;
+    background-color: antiquewhite;
+}
+
+.sticky{
+    position: -webkit-sticky;
+    position: sticky;
+    padding: 5px;
+    margin-left: 100px;
+    top: 0;
+    background-color: aqua;
+    border: 2px solid green;
+    z-index: 1;
+}
+
+.relative1{
+    position: relative;
+    bottom: 5px;
+    font-weight: bold;
+    color: cadetblue;
+    z-index: 0;
+}
+.relative2{
+    position: relative;
+    top: 5px;
+    font-weight: bold;
+    color: brown;
+    z-index: 0;
+}
+.fixed{
+    position: fixed;
+    top: 0;
+    right: 0;
+    background-color: antiquewhite;
+    border: 2px solid brown;
+    padding: 5px;
+    z-index: 2;
+}
+.kanan{
+    position: relative;
+    z-index: 2;
+    left: 100px;
+}

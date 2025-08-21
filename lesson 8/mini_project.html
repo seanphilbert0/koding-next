@@ -1,0 +1,58 @@
+   <!DOCTYPE html>
+   <html lang="en">
+   <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<head>
+<link rel="stylesheet" href="style.css">
+ <style type="text/css">
+    .button{
+        background-color: green;
+        border: none;
+        color: white;
+        padding: 15px 32px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+    }
+ </style>
+   
+</head>
+ 
+  <body>
+    <script>
+      function firstquestion() {
+        var name = prompt("what is your name?");
+
+        document.getElementById("firstanswer").innerHTML = "name: " + name;
+      }
+
+      function secondquestion() {
+        var age = prompt("how old are you");
+
+        document.getElementById("secondanswer").innerHTML = "age: " + age;
+      }
+secon
+      function thirdquestion() {
+        var address = prompt("where do you live");
+
+        document.getElementById("thirdanswer").innerHTML =":address " + address;
+      }
+    </script>
+
+<div style="text-align: center;">
+    <h1>please click the buttons below</h1>
+    <input class="button" type="submit" value="firstquestion" onclick="firstquestion()"/>
+    <input class="button" type="submit" value="secondquestion" onclick="secondquestion()"/>
+    <input class="button" type="submit" value="thirdquestion" onclick="thirdquestion()"/>
+</div>
+
+<h2 style="text-align: center;"> your profile</h2>
+
+<div id="firstanswer" style="text-align: center; margin-top: 25px;"></div>
+<div id="secondanswer" style="text-align: center; margin-top: 25px;"></div>
+<div id="thirdanswer" style="text-align: center; margin-top: 25px;"></div>
+  </body>
+</html>

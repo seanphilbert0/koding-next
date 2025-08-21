@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Document</title>
+  </head>
+
+  <body>
+    <div style="padding-top: 10px">
+      <h1 style="text-align: center">Text summarize apps</h1>
+    </div>
+
+    <div class="container" style="margin-left: 70px">
+      <h1>Make Your School Life Easier</h1>
+      <p>Summarize your material easily with us</p>
+      <textarea name="" id="userinput" rows="20" cols="50"> </textarea>
+      <br /><br />
+      <button class="button" id="summarizebutton" onclick="gettextareavalue()">summarize</button>
+    </div>
+    <div class="container">
+        <h1>see the results here</h1>
+        <p>example</p>
+        <textarea name="w3review" id="resulttextarea" rows="10" cols="50">
+        </textarea>
+        <br><br>
+    </div>
+    <div id="answer"></div>
+    <script type="importmap">
+      {
+        "imports": {
+          "@google/generative-ai": "https://esm.run/@google/generative-ai"
+        }
+      }
+    </script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/showdown/2.1.0/showdown.min.js"
+      integrity="sha512-LhccdVNGe2QMEfI3x4DVV3ckMRe36TfydKss6mJpdHjNFiV07dFpS2xzeZedptKZrwxfICJpez09iNioiSZ3hA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+
+    <!-- Import @google/generative-ai, as shown above. -->
+    <script type="module">
+      import { GoogleGenerativeAI } from "@google/generative-ai";
+
+      // Fetch your API_KEY
+      const API_KEY = "AIzaSyClB-zsxUQBn-5vm65yXQm4kD8G-lQCk2U";
+
+      // Access your API key
+      const genAI = new GoogleGenerativeAI(API_KEY);
+      const model = genAI.getGenerativeModel({ model: "gemini-1.5-flash" });
+
+      async function ask(prompt) {
+        const model = genAI.getGenerativeModel({ model: "gemini-1.5-flash" });
+        const result = await model.generateContent(prompt);
+        const response = await result.response;
+        const text = response.text();
+        return text;
+        //let convertedText = new showdown.Converter().makeHtml(text);
+        //return convertedText;
+      }
+
+      // get value from text area
+      function gettextareavalue() {
+        // Get the value of the textarea with id="userinput"
+        var textareaValue = document.getElementById("userinput").value;
+        console.log(textareaValue); // This will log the value to the console
+      }
+
+      // generate summarization
+      async function generateSummarization() {
+        let textareaValue = document.getElementById("userinput").value;
+        let sum_result = await ask(
+          "Please provide the output in plain text without any formatting symbols like ** for boldin the summary. Summarize this text and use good icon symbols before the sentence, use various icon symbols. Don't use any formatting symbols like ** or - " +
+            textareaValue
+        );
+        document.getElementById("resulttextarea").value = sum_result;
+      }
+
+      document
+        .getElementById("summarizebutton")
+        .addEventListener("click", generateSummarization);
+    </script>
+  </body>
+</html>

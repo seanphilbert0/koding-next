@@ -1,0 +1,49 @@
+body {
+  font-family: "impact", sans-serif;
+  text-align: justify;
+  background-image: url("vertical_cloth.png");
+}
+
+#container {
+  width: 1000px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#logo {
+  background-color: darkgray;
+  text-align: center;
+  padding: 15px;
+}
+
+#nav {
+  float: left;
+  background-color: brown;
+  width: 120px;
+  min-height: 410px;
+  padding: 15px;
+}
+
+#content {
+  float: left;
+  background-color: white;
+  width: 830px;
+  padding: 10px;
+  min-height: 420px;
+}
+
+#footer {
+  clear: both;
+  background-color: black;
+  text-align: center;
+  color: white;
+  padding: 10px;
+}
+
+img {
+  display: block;
+  margin: auto;
+  width: 512px;
+  height: 269px;
+  margin-top: 20px;
+}

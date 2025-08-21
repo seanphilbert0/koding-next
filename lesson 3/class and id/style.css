@@ -1,0 +1,34 @@
+@font-face{
+    font-family: "HeadingFont";
+    src: url("Strawberry Blossom.ttf");
+}
+
+body{
+    background-color: aquamarine;
+}
+h1{
+    font-family: cursive;
+    color: brown;
+    font-size: 70px;
+}
+h3{
+    font-family: sans-serif;
+    color: blue;
+    font-size: 30px;
+}
+
+
+
+.Font2{
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
+}
+
+.Font1{
+    font-family: 'Supermecado One', cursive;
+    font-weight: bold;
+}
+
+.white{
+    color: blue;
+}

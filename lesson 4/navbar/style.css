@@ -1,0 +1,31 @@
+body{
+    height: 1500px;
+}
+
+ul{
+    list-style-type: none;
+    padding: 0;
+background-color: beige;
+padding-top: 20px;
+padding-bottom: 20px;
+padding-left: 0;
+position: sticky;
+top: 0;
+}
+
+ul>li{
+    display: inline;
+    margin: 30px;
+    height: 100%;
+    width: 100%;
+}
+
+ul>li>a{
+    text-decoration: none;
+    color: white;
+
+}
+
+ul>li>a:hover{
+    color: orange;
+}
